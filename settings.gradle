@@ -1,1 +1,1 @@
-include ':app'
+include ':app' //tells gradle that it will build a module named App.

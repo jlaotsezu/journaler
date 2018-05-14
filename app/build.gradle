@@ -50,22 +50,20 @@ android {
         }
     }
     sourceSets {
-        main {
-            java.srcDirs = [
-                    "src/main/kotlin",
-                    "src/common/kotlin",
-                    "src/debug/kotlin",
-                    "src/release/kotlin",
-                    "src/staging/kotlin",
-                    "src/preproduction/kotlin",
-                    "src/main/java",
-                    "src/common/java",
-                    "src/debug/java",
-                    "src/release/java",
-                    "src/staging/java",
-                    "src/preproduction/java"
-            ]
-        }
+        main.java.srcDirs += [
+                'src/main/kotlin',
+                'src/common/kotlin',
+                'src/debug/kotlin',
+                'src/release/kotlin',
+                'src/staging/kotlin',
+                'src/preproduction/kotlin',
+                'src/debug/java',
+                'src/release/java',
+                'src/staging/java',
+                'src/preproduction/java',
+                'src/androidTest/java',
+                'src/androidTest/kotlin'
+        ]
     }
     buildToolsVersion '27.0.3'
 }
@@ -83,4 +81,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
     implementation 'com.squareup.okhttp3:okhttp:3.6.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
 }
